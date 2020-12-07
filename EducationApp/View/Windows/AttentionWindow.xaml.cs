@@ -25,10 +25,6 @@ namespace EducationApp.View.Windows
             this.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             this.ShowDialog();
         }
-        //public void CloseWindow(object sender, RoutedEventArgs e)
-        //{         
-        //    this.Close();            
-        //}
         private bool disposed = false;
         public void Dispose()
         {

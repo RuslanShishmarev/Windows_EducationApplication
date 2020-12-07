@@ -100,13 +100,14 @@ namespace EducationApp.ViewModel
                       using (ApplicationContext db = new ApplicationContext())
                       {
                           //create new education object
-                          EducationObject educationObject = new EducationObject 
-                          { 
-                              Level = LevelObject, 
-                              Name = NameObject, 
-                              Description = DescriptionObject, 
-                              Topic = TopicObject, 
-                              Type = EducationTypeValue.ToString() 
+                          EducationObject educationObject = new EducationObject
+                          {
+                              Level = LevelObject,
+                              Name = NameObject,
+                              Description = DescriptionObject,
+                              Topic = TopicObject,
+                              Type = EducationTypeValue.ToString(),
+                              Author = RegLogViewModelClass.LoginUser
                           };
                           //add to list
                           EducationObjects.Insert(0, educationObject);
