@@ -107,7 +107,7 @@ namespace EducationApp.ViewModel
                               Description = DescriptionObject,
                               Topic = TopicObject,
                               Type = EducationTypeValue.ToString(),
-                              Author = RegLogViewModelClass.LoginUser
+                              AuthorId = RegLogViewModelClass.LoginUser.Id
                           };
                           //add to list
                           EducationObjects.Insert(0, educationObject);

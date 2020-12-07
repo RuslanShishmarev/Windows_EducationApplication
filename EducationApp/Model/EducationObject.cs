@@ -11,9 +11,9 @@ namespace EducationApp.Model
         public string Topic { get; set; }
         public string Description { get; set; }
         public int Level { get; set; }
-        public int AuthorInfoKey { get; set; }
-        [ForeignKey("AuthorInfoKey")]
-        public User Author { get; set; }
+        [ForeignKey("User")]
+        public int AuthorId { get; set; }
+        
 
     }
 }
