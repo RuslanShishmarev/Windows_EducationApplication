@@ -1,0 +1,21 @@
+﻿<Window x:Class="EducationApp.View.Windows.AttentionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EducationApp.View.Windows"
+        mc:Ignorable="d"
+        Title="AttentionWindow" Height="100" Width="150" 
+        WindowStyle="None"
+        ResizeMode="NoResize" MouseMove="Window_MouseMove">
+    <Grid>
+        <TextBlock x:Name="InputText"
+                   Text="Внимание" HorizontalAlignment="Stretch"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center" FontSize="15"
+                   TextWrapping="Wrap"/>
+        <!--<Button VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Content="Close" Click="CloseWindow"/>-->
+    </Grid>
+</Window>

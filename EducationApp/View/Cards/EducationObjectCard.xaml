@@ -1,0 +1,60 @@
+﻿<UserControl x:Class="EducationApp.View.Cards.EducationObjectCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EducationApp.View.Cards"
+             mc:Ignorable="d" 
+             d:DesignHeight="150" d:DesignWidth="150"
+             Height="150"
+             Width="150"
+             x:Name="mainControl"
+             Uid="0">
+    <UserControl.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="WhiteSmoke"/>
+        </Grid.Background>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top">
+            <!--<Button x:Name="removeBtn"
+                    Content="-"
+                    ToolTip="Add to my list"
+                    Margin="2"
+                    Width="15"
+                    Visibility="{Binding AddBtnVisibility}"
+                    Command="{Binding RemoveEducationObjectFromUserList}"
+                    CommandParameter="{Binding ElementName=mainControl, Path=Uid}"/>-->
+            <Button x:Name="addBtn"
+                    Content="+"                    
+                    ToolTip="Add to my list"
+                    Margin="2"
+                    Width="15"
+                    Visibility="{Binding AddBtnVisibility}"
+                    Command="{Binding AddEducationObjectToUserList}"
+                    CommandParameter="{Binding ElementName=mainControl, Path=Uid}"/>            
+        </StackPanel>
+        <StackPanel Orientation="Vertical"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Name:"/>
+                <TextBlock x:Name="TitleEduObject" Text="Object name"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Type:"/>
+                <TextBlock x:Name="TypeEduObject" Text="Object type"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Level:"/>
+                <TextBlock x:Name="LevelEduObject" Text="Object Level"/>
+            </StackPanel>
+            <Button Content="Start"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

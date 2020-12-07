@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="EducationApp.View.Cards.AddNewTestCourseCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EducationApp.View.Cards"
+             mc:Ignorable="d" 
+             d:DesignHeight="350" d:DesignWidth="300"
+             Width="300" >
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Fonts/Roboto-Light.ttf #Roboto"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10,0"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Cursor" Value="Hand"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50px"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.Background>
+                <SolidColorBrush Color="#4A5668"/>
+            </Grid.Background>
+            <TextBlock Grid.Row="0"
+                           Text="New test/course creation"
+                           FontSize="18"
+                           Foreground="WhiteSmoke"/>
+        </Grid>
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0, 10">
+                <RadioButton Margin="0,0,50,0" IsChecked="{Binding IsEducationCourse}">
+                    <TextBlock Text="Course"/>
+                </RadioButton>
+                <RadioButton IsChecked="{Binding IsEducationTest}">
+                    <TextBlock Text="Test"/>
+                </RadioButton>
+            </StackPanel>
+
+            <TextBlock Text="Name" Margin="0, 5"/>
+            <TextBox x:Name="NameEduObject" Text="{Binding NameObject}"/>
+            <TextBlock Text="Topic" Margin="0, 5"/>
+            <TextBox x:Name="TopicEduObject" Text="{Binding TopicObject}"/>
+            <TextBlock Text="Level" Margin="0, 5"/>
+            <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                <RadioButton IsChecked="{Binding IsZeroLevel}" Content="0" Margin="5,0"/>
+                <RadioButton IsChecked="{Binding IsOneLevel}" Content="1" Margin="5,0"/>
+                <RadioButton IsChecked="{Binding IsTwoLevel}" Content="2" Margin="5,0"/>
+                <RadioButton IsChecked="{Binding IsThreeLevel}" Content="3" Margin="5,0"/>
+                <RadioButton IsChecked="{Binding IsFourLevel}" Content="4" Margin="5,0"/>
+                <RadioButton IsChecked="{Binding IsFiveLevel}" Content="5" Margin="5,0"/>
+            </StackPanel>
+            <TextBlock Text="ShortDescription" Margin="0, 5"/>
+            <TextBox x:Name="ShortDescriptionEduObject" 
+                         TextWrapping="Wrap"
+                         Text="{Binding DesciptionObject}"/>
+            <Button Margin="0, 5" Width="100" Background="#4A5668"
+                        Command="{Binding AddCommand}">
+                <TextBlock Text="OK" Foreground="WhiteSmoke"/>
+            </Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
