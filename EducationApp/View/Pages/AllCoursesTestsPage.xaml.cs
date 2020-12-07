@@ -24,6 +24,7 @@ namespace EducationApp.View
                     card.TitleEduObject.Text = eduObject.Name;
                     card.TypeEduObject.Text = eduObject.Type;
                     card.LevelEduObject.Text = eduObject.Level.ToString();
+                    card.AuthorEduObject.Text = eduObject.Author.ToString();
                     card.Margin = new System.Windows.Thickness(10);
                     AllCards.Children.Add(card);
                 }

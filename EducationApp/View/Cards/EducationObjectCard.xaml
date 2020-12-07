@@ -54,6 +54,10 @@
                 <TextBlock Text="Level:"/>
                 <TextBlock x:Name="LevelEduObject" Text="Object Level"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Author:"/>
+                <TextBlock x:Name="AuthorEduObject" Text="Object Level"/>
+            </StackPanel>
             <Button Content="Start"/>
         </StackPanel>
     </Grid>
